@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import by.paranoidandroid.recyclerviewexample.R;
 import by.paranoidandroid.recyclerviewexample.activities.ActorDetailsActivity;
 import by.paranoidandroid.recyclerviewexample.models.Actor;
+import by.paranoidandroid.recyclerviewexample.utils.ItemClickListener;
 
 public class ActorListAdapter extends RecyclerView.Adapter<ActorListAdapter.ViewHolder> {
     private final String EXTRA_TAG = "ACTOR";
@@ -29,14 +30,21 @@ public class ActorListAdapter extends RecyclerView.Adapter<ActorListAdapter.View
         layoutInflater = LayoutInflater.from(context);
     }
 
-    public Actor getItem(int position) {
+    private Actor getItem(int position) {
         return actors.get(position);
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(layoutInflater.inflate(R.layout.list_item_actor,
+        ViewHolder holder = new ViewHolder(layoutInflater.inflate(R.layout.list_item_actor,
                 parent, false));
+
+        holder.itemView.setOnClickListener(view -> {
+            int position = holder.getAdapterPosition();
+            clickListener.onItemClick(view, context, position);
+        });
+
+        return holder;
     }
 
     @Override
@@ -50,12 +58,6 @@ public class ActorListAdapter extends RecyclerView.Adapter<ActorListAdapter.View
                 .load(actor.getThumb())
                 .apply(options)
                 .into(holder.thumb);
-
-        holder.thumb.setOnClickListener(view -> {
-            Intent intent = new Intent(context, ActorDetailsActivity.class);
-            intent.putExtra(EXTRA_TAG, actor);
-            context.startActivity(intent);
-        });
     }
 
     @Override
@@ -71,4 +73,11 @@ public class ActorListAdapter extends RecyclerView.Adapter<ActorListAdapter.View
             thumb = itemView.findViewById(R.id.thumb);
         }
     }
+
+    private ItemClickListener clickListener = (view, ctx, position) -> {
+        Actor actor = getItem(position);
+        Intent intent = new Intent(ctx, ActorDetailsActivity.class);
+        intent.putExtra(EXTRA_TAG, actor);
+        ctx.startActivity(intent);
+    };
 }
