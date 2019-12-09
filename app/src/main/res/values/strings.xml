@@ -2,4 +2,6 @@
     <string name="app_name">RecyclerView Example</string>
 
     <string name="avatar">Avatar</string>
+    <string name="more_btn_label">Get more info</string>
+    <string name="unexpected_error">Something went wrong</string>
 </resources>

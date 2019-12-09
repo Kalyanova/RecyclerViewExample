@@ -417,27 +417,6 @@ public class DataUtils {
                         "shelved his film Gore and removed him from the cast of the last season of House of Cards. " +
                         "He was to appear in Ridley Scott's film All the Money in the World; however, all his scenes " +
                         "were cut from the film, and Christopher Plummer replaced him in reshoots."));
-        actors.add(new Actor("Robin Wright",
-                Uri.parse("https://image.ibb.co/eJ9nB8/robin_wright_thumb.jpg"),
-                Uri.parse("https://image.ibb.co/cxidjT/robin_wright_large.jpg"),
-                "Robin Gayle Wright (born April 8, 1966) is an American actress and director. She is " +
-                        "the recipient of seven Primetime Emmy Award nominations and has earned a Golden Globe Award " +
-                        "and a Satellite Award for her work in television.\nWright first gained attention for her " +
-                        "role in the NBC Daytime soap opera Santa Barbara, as Kelly Capwell from 1984 to 1988. She " +
-                        "then made the transition to film, starring in the romantic comedy fantasy adventure film " +
-                        "The Princess Bride (1987). This role led Wright to further success in the film industry, " +
-                        "with starring roles in films such as the romantic comedy-drama Forrest Gump (1994), " +
-                        "the romantic drama Message in a Bottle (1999), the superhero drama-thriller Unbreakable (2000), " +
-                        "the historical drama The Conspirator (2010), the biographical sports drama Moneyball (2011), " +
-                        "the mystery thriller The Girl with the Dragon Tattoo (2011), the biographical drama " +
-                        "Everest (2015), the superhero film Wonder Woman (2017), and the neo-noir science fiction " +
-                        "film Blade Runner 2049 (2017).\nWright starred as Claire Underwood in the Netflix political " +
-                        "drama web television series House of Cards, for which she won the Golden Globe Award for " +
-                        "Best Actress – Television Series Drama in 2013, making her the first actress to win a " +
-                        "Golden Globe for a web television series. Wright has also received consecutive " +
-                        "Primetime Emmy Award nominations in the Outstanding Lead Actress category for " +
-                        "House of Cards between 2013 and 2017, and the Outstanding Drama Series category in " +
-                        "2016 and 2017 as a producer on the show."));
         actors.add(new Actor("Tom Hardy",
                 Uri.parse("https://image.ibb.co/e1Fur8/tom_hardy_thumb.jpg"),
                 Uri.parse("https://image.ibb.co/bSONB8/tom_hardy_large.jpg"),

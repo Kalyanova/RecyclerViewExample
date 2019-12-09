@@ -10,14 +10,14 @@ public class Actor implements Parcelable {
     private Uri avatar;
     private String biography;
 
-    public Actor(String name, Uri thumb, Uri avatar, String biography) {
+    Actor(String name, Uri thumb, Uri avatar, String biography) {
         this.name = name;
         this.thumb = thumb;
         this.avatar = avatar;
         this.biography = biography;
     }
 
-    public Actor(Parcel parcel) {
+    private Actor(Parcel parcel) {
         String[] data = new String[4];
         parcel.readStringArray(data);
         this.name = data[0];

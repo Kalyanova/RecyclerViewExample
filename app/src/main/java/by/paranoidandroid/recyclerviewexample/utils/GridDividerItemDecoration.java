@@ -17,7 +17,7 @@ public class GridDividerItemDecoration extends ItemDecoration {
     private int space, columnCount;
 
     /**
-     * Default constuctor that sets space around images into 2 dp.
+     * Default constructor that sets space around images into 2 dp.
      */
     public GridDividerItemDecoration(Context context, int columnCount) {
         this(context, 2, columnCount);
@@ -26,7 +26,7 @@ public class GridDividerItemDecoration extends ItemDecoration {
     /**
      * @param space The DP space around child views in RecyclerView.
      */
-    public GridDividerItemDecoration(Context context, int columnCount, int space) {
+    private GridDividerItemDecoration(Context context, int columnCount, int space) {
         this.context = context;
         this.columnCount = columnCount;
         this.space = convertDpToPx(space);
